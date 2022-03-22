@@ -3,7 +3,11 @@
 ### Project Description :
 
 - This repo contains the code related to the frontend of the project.
-  The frontend utilises: - Figma - React - Styled Components - Jest Testing
+  The frontend utilises:
+  - Figma
+  - React
+  - Styled Components
+  - Jest Testing
 
 #### Requirements
 
