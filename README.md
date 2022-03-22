@@ -8,6 +8,7 @@
   - React
   - Styled Components
   - Jest Testing
+  - prettier
 
 #### Requirements
 
