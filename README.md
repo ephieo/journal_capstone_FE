@@ -3,7 +3,7 @@
 ### Project Description :
 
 - This repo contains the code related to the frontend of the project.
-  #### The frontend utilises:
+  The frontend utilises:
   - Figma
   - React
   - Styled Components
