@@ -23,16 +23,19 @@ export const PostBar = styled.div`
 `;
 
 export const PostTitle = styled.h4`
-  font-family: "GFS Didot", serif;
-  /* min-width: 10vw; */
+  font-family: "Playfair Display", serif;
+  color: #003221;
   margin: 0.3rem;
   @media (max-width: 968px) {
     font-size: 10px;
   }
 `;
 export const PostDate = styled.p`
-  font-family: "GFS Didot", serif;
+  font-family: "Antic Didone", serif;
+  font-size: 12px;
   min-width: 5.5rem;
+  margin-left: 0.3rem;
+  color: #003221;
 
   @media (max-width: 968px) {
     font-size: 10px;

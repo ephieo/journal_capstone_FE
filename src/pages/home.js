@@ -6,6 +6,7 @@ import PostsManager from "../components/PostsManager";
 import PostTitleBox from "../components/PostTitleBox";
 import { Scrollbars } from "react-custom-scrollbars";
 import { newestDate, oldestDate } from "../utilitties/sortDate";
+import Navbar from "./../components/NavBar";
 export default function Home() {
   const [data, setData] = useState(null);
   const [toggle, setToggle] = useState(true);
@@ -31,6 +32,7 @@ export default function Home() {
   };
   return (
     <MainCont>
+      <Navbar />
       <PostsManager toggle={toggle} setToggle={setToggle} />
       <Scrollbars style={{ width: "70vw", height: "60vh" }}>
         <SubCont
