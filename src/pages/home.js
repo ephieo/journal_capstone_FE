@@ -7,10 +7,9 @@ import { newestDate, oldestDate } from "../utilitties/sortDate";
 import { MainCont, SubCont } from "./../styled-components/reusables";
 import PostsManager from "../components/PostsManager";
 import PostTitleBox from "../components/PostTitleBox";
-import Navbar from "./../components/NavBar";
 import Footer from "../components/Footer";
 
-import { Scrollbars } from "react-custom-scrollbars";
+import { useLocation } from "react-router-dom";
 
 export default function Home() {
   const [data, setData] = useState(null);
@@ -29,9 +28,11 @@ export default function Home() {
       .then((result) => setData(result))
       .catch((error) => error);
   };
+
+  let location = useLocation();
   return (
     <MainCont>
-      <Navbar />
+      {/* <Navbar /> */}
       <PostsManager toggle={toggle} setToggle={setToggle} />
       <SubCont
         flex_dir="row"
@@ -51,7 +52,9 @@ export default function Home() {
           <h2>"no data yet..."</h2>
         )}
       </SubCont>
-      <Footer page={"All-tasks"} />
+      <Footer
+        page={location.pathname === "/" ? "All Tasks" : location.pathname}
+      />
     </MainCont>
   );
 }

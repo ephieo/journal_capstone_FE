@@ -5,7 +5,7 @@ export const PostToggle = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: ${(props) => props.width || "10vw"};
+  width: ${(props) => (props.width ? props.width : "10vw")};
   height: 7vh;
   border: #b5c2be dashed 3px;
   border-radius: 20px;
@@ -24,6 +24,16 @@ export const PostBar = styled.div`
 
 export const PostTitle = styled.h4`
   font-family: "Playfair Display", serif;
+  font-size: ${(props) => (props.font_size ? props.font_size : "16px")};
+  color: #003221;
+  margin: 0.3rem;
+  @media (max-width: 968px) {
+    font-size: 10px;
+  }
+`;
+export const Text = styled.p`
+  font-family: ${(props) => (props.family ? props.family : "Playfair Display")};
+  font-size: ${(props) => (props.font_size ? props.font_size : "16px")};
   color: #003221;
   margin: 0.3rem;
   @media (max-width: 968px) {
@@ -51,7 +61,8 @@ export const ToggleBtn = styled.button`
 export const QuoteBox = styled.div`
   width: 20vw;
   height: 18vh;
-  border: solid green 3px;
+  /* border: solid green 3px; */
   border-radius: 20px;
   padding: 1rem;
+  margin-bottom: 2.5rem;
 `;

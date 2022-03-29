@@ -37,7 +37,7 @@ export const Img = styled.img`
 `;
 
 export const FooterCont = styled.div`
-  bottom: 0;
+  bottom: 1rem;
   position: fixed;
   display: flex;
   flex-direction: row;
