@@ -33,6 +33,5 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  /* margin:1rem; */
   background: #003221;
 }
