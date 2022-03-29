@@ -39,7 +39,6 @@ export default function Home() {
           width="70vw"
           border="dashed #B5C2BE 3px"
           overflow="scroll">
-          {data ? console.log("oldest date ", oldestDate(data)) : "hello"}
           {data ? (
             setTaskOrder().map((e) => {
               return (

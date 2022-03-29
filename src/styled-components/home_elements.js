@@ -38,3 +38,9 @@ export const PostDate = styled.p`
     font-size: 10px;
   }
 `;
+
+export const ToggleBtn = styled.button`
+  text-decoration: none;
+  border: none;
+  background: transparent;
+`;

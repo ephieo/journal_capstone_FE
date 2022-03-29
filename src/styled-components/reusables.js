@@ -31,4 +31,5 @@ export const Img = styled.img`
   height: ${(props) => (props.height ? props.height : "10vh")};
   width: ${(props) => (props.width ? props.width : "20vw")};
   margin: ${(props) => (props.margin ? props.margin : "1rem")};
+  background: transparent;
 `;
