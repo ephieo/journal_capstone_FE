@@ -5,5 +5,34 @@
   background: #EEEAE4;
 }
 
+/* width */
+::-webkit-scrollbar {
+  /* display: none; */
+  margin:1rem;
+  width: 5px;
+  
 
+ 
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  margin:2rem;
+  background: transparent;
+ 
+ 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #B5C2BE;
+  border-radius: 20px;
+  margin-right:10rem;
+ 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* margin:1rem; */
+  background: #003221;
+}

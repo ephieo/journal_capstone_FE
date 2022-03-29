@@ -25,6 +25,8 @@ export const SubCont = styled.div`
   border: ${(props) => (props.border ? props.border : "")};
   border-radius: 20px;
   overflow: ${(props) => (props.overflow ? props.overflow : "visible")};
+  -ms-overflow-x: auto;
+  overflow-x: auto;
 `;
 
 export const Img = styled.img`
@@ -35,12 +37,14 @@ export const Img = styled.img`
 `;
 
 export const FooterCont = styled.div`
+  bottom: 0;
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 20vh;
+  height: 10vh;
 `;
 export const NavCont = styled.div`
   top: 0;

@@ -47,3 +47,11 @@ export const ToggleBtn = styled.button`
   border: none;
   background: transparent;
 `;
+
+export const QuoteBox = styled.div`
+  width: 20vw;
+  height: 18vh;
+  border: solid green 3px;
+  border-radius: 20px;
+  padding: 1rem;
+`;

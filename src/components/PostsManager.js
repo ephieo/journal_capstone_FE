@@ -10,7 +10,7 @@ export default function PostsManager({ toggle, setToggle }) {
   return (
     <PostBar>
       <Img src={add_post_btn} width="12vw" />
-      <PostToggle width="12vw">
+      <PostToggle width="9vw">
         <ToggleButton
           toggle={toggle}
           setToggle={setToggle}
