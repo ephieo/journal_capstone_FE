@@ -1,8 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import { fetchData } from "../utilitties/fetchy";
-import { newestDate, oldestDate } from "../utilitties/sortDate";
+import { fetchData } from "../utils/fetchy";
+import { newestDate, oldestDate } from "../utils/sortDate";
+import Capitalise from "../utils/utils";
 
 import { MainCont, SubCont } from "./../styled-components/reusables";
 import PostsManager from "../components/PostsManager";
@@ -32,7 +33,7 @@ export default function Home() {
   let location = useLocation();
   return (
     <MainCont>
-      {/* <Navbar /> */}
+      {console.log(data)}
       <PostsManager toggle={toggle} setToggle={setToggle} />
       <SubCont
         flex_dir="row"
@@ -53,7 +54,11 @@ export default function Home() {
         )}
       </SubCont>
       <Footer
-        page={location.pathname === "/" ? "All Tasks" : location.pathname}
+        page={
+          location.pathname === "/"
+            ? "All Posts"
+            : Capitalise(location.pathname)
+        }
       />
     </MainCont>
   );

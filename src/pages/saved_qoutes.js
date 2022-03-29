@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useLocation } from "react-router-dom";
-import Capitalise from "../utilitties/utils";
+import Capitalise from "../utils/utils";
 
 import { SubCont } from "../styled-components/reusables";
 import Footer from "../components/Footer";
@@ -14,7 +14,7 @@ export default function SavedQuotes() {
       <Footer
         page={
           location.pathname === "/"
-            ? "All Tasks"
+            ? "All Posts"
             : Capitalise(location.pathname)
         }
       />

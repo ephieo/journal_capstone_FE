@@ -9,7 +9,7 @@ import ToggleButton from "./ToggleButton";
 export default function PostsManager({ toggle, setToggle }) {
   return (
     <PostBar>
-      <Img src={add_post_btn} width="12vw" />
+      <Img src={add_post_btn} width="12vw" alt="add post button" />
       <PostToggle width="9vw">
         <ToggleButton
           toggle={toggle}
