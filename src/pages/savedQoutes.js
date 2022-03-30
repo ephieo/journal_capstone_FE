@@ -10,7 +10,7 @@ export default function SavedQuotes() {
   let location = useLocation();
   return (
     <>
-      <SubCont>QUOTES</SubCont>);
+      <SubCont>QUOTES</SubCont>
       <Footer
         page={
           location.pathname === "/"
