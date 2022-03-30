@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import Home from "./pages/home";
 import { BrowserRouter } from "react-router-dom";
 import { act } from "react-dom/test-utils";
-import SavedQuotes from "./pages/saved_qoutes";
+import SavedQuotes from "./pages/savedQoutes";
 
 describe("Home", () => {
   const fakePosts = [
