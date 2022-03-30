@@ -13,9 +13,9 @@ function App() {
       <NavBar />
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home />} />
           <Route exact path="/quotes" element={<SavedQuotes />} />
           <Route exact path="/add-post" element={<AddPostForm />} />
+          <Route exact path="/" element={<Home />} />
         </Routes>
       </Router>
     </>

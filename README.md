@@ -1,5 +1,20 @@
 # JOURNAL APP FE
 
+### How to run App :
+
+Clone locally :
+
+- `git clone https://github.com/ephieo/journal_capstone_FE.git`
+- `cd journal_capstone_FE/`
+- `npm i` or `npm install`
+- `npm run start` or `npm start`
+
+### How to run Tests :
+
+#### Make sure dependencies are installed
+
+- `npm run test` or `npm test`
+
 ### Project Description :
 
 - This repo contains the code related to the frontend of the project.
