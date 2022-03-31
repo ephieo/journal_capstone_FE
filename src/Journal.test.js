@@ -72,6 +72,6 @@ describe("Home", () => {
         </BrowserRouter>
       );
     });
-    screen.getByAltText("add post button");
+    screen.getByAllText("add post button");
   });
 });
