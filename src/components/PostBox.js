@@ -6,7 +6,8 @@ import {
   Img,
   Btn,
 } from "../styled-components/reusables";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import ReadMoreReact from "read-more-react";
 import { deleteContentData } from "../utils/fetchy";
 import bin from "./../images/bin.svg";
 
@@ -27,7 +28,7 @@ export default function PostBox({ title, content, date }) {
     <>
       <Title font_size="30px">{title}</Title>
       <PostCont>
-        {content}
+        <ReadMoreReact text={content} readMoreText={"..."} />
 
         <BinDate>
           <Btn

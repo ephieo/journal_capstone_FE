@@ -27,6 +27,9 @@ export const SubCont = styled.div`
   overflow: ${(props) => (props.overflow ? props.overflow : "visible")};
   -ms-overflow-x: auto;
   overflow-x: auto;
+  font-family: "Playfair Display", serif;
+  font-size: ${(props) => (props.font_size ? props.font_size : "16px")};
+  color: ${(props) => (props.color ? props.color : "#003221")};
 `;
 
 export const Img = styled.img`

@@ -7,6 +7,10 @@
 .links{
   text-decoration: none;
 }
+.links:visited { 
+  text-decoration: none; 
+  color: #003221; 
+ }
 
 /* width */
 ::-webkit-scrollbar {

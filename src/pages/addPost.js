@@ -1,7 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import { postContentData, paramsUrl } from "../utils/fetchy";
+import { postContentData } from "../utils/fetchy";
 
 import { useLocation, useNavigate } from "react-router-dom";
 import Capitalise from "../utils/utils";
@@ -61,13 +61,6 @@ export default function AddPostForm() {
           <SubmitInput type="submit" value="SUBMIT" />
         </Form>
       </MainCont>
-      <Footer
-        page={
-          location.pathname === "/"
-            ? "All Posts"
-            : Capitalise(location.pathname)
-        }
-      />
     </>
   );
 }

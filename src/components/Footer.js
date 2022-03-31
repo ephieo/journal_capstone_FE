@@ -30,15 +30,14 @@ export default function Footer({ page }) {
       <Logo>{page}</Logo>
       <QuoteBox>
         <PostTitle>Quote of the Day : </PostTitle>
+
         {data ? (
           <>
-            {/* {data ?? console.log(quoteRandomiser(data.allPosts).author)} */}
             <Text family="'Antic Didone', serif;">
-              {/* {quoteRandomiser(data.data.allPosts).text}-{" "}
-              {quoteRandomiser(data.data.allPosts).author} */}
+              {quoteRandomiser(data).text}
             </Text>
             <Text family="'Antic Didone', serif;" margin="01rem">
-              {/* - {quoteRandomiser(data).author} */}
+              - {quoteRandomiser(data).author}
             </Text>
           </>
         ) : (
