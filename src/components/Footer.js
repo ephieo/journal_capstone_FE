@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { getAllPostData } from "../utils/fetchy";
+import { fetchData } from "../utils/fetchy";
 
 import { FooterCont, Logo } from "../styled-components/reusables";
 import {
@@ -12,9 +12,7 @@ export default function Footer({ page }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("https://type.fit/api/quotes", {
-      method: "GET",
-    })
+    fetchData("https://type.fit/api/quotes", {})
       .then((data) => setData(data))
       .catch((error) => console.log(error));
   }, []);
@@ -34,11 +32,13 @@ export default function Footer({ page }) {
         <PostTitle>Quote of the Day : </PostTitle>
         {data ? (
           <>
+            {/* {data ?? console.log(quoteRandomiser(data.allPosts).author)} */}
             <Text family="'Antic Didone', serif;">
-              {quoteRandomiser(data).text}- {quoteRandomiser(data).author}
+              {/* {quoteRandomiser(data.data.allPosts).text}-{" "}
+              {quoteRandomiser(data.data.allPosts).author} */}
             </Text>
             <Text family="'Antic Didone', serif;" margin="01rem">
-              - {quoteRandomiser(data).author}
+              {/* - {quoteRandomiser(data).author} */}
             </Text>
           </>
         ) : (

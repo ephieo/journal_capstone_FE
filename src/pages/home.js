@@ -26,15 +26,14 @@ export default function Home() {
 
   const resolveData = () => {
     getAllPostData("http://127.0.0.1:8000/graphql")
-      .then((result) => setData(result))
+      .then((result) => setData(result.data.allPosts))
       .catch((error) => error);
   };
 
   let location = useLocation();
-  // let { id } = useParams();
+
   return (
     <MainCont>
-      {console.log(data)}
       <PostsManager toggle={toggle} setToggle={setToggle} />
       <SubCont
         flex_dir="row"

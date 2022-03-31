@@ -1,3 +1,9 @@
+export const fetchData = (url) => {
+  return fetch(url)
+    .then((res) => res.json())
+    .catch((error) => error);
+};
+
 export const getAllPostData = (url) => {
   const query = `query{
 	
