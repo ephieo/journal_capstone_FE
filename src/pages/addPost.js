@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { postContentData, paramsUrl } from "../utils/fetchy";
 
@@ -22,12 +22,12 @@ export default function AddPostForm() {
   let location = useLocation();
   let navigate = useNavigate();
 
-  const url = paramsUrl(`http://127.0.0.1:8000/graphql/`, title, content, "-");
-  console.log(url);
+  const url = `http://127.0.0.1:8000/graphql`;
+
   function resolveFormData() {
-    postContentData(`${url}`, title, content, "-")
+    console.log(url, title, content);
+    postContentData(url, title, content)
       .then((result) => result.json())
-      .then((data) => console.log(data))
       .catch((error) => error);
     navigate("/");
   }
@@ -37,7 +37,7 @@ export default function AddPostForm() {
         <Form
           onSubmit={(e) => {
             e.preventDefault();
-            resolveFormData(url, title, content, "-");
+            resolveFormData(url, title, content);
           }}>
           <Label htmlFor="title">TITLE</Label>
           <Input

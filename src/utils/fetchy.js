@@ -5,49 +5,65 @@ export const fetchData = (url) => {
 };
 
 export const postContentData = (url, title, content) => {
-  // const query = `mutation {
-  //     addPost(title:title,content:content){
-  //        post{title,content}
-  //     }`;
-
-  // console.log("query===", query);
-
-  return fetchData(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/JSON" },
-    body: JSON.stringify({
-      query: `mutation {
-      addPost(title:title,content:content){
-         post{title,content}
-      }`,
-      variables: { title, content },
-
-      // title: title,
-      // content: content,
-    }),
-  })
-    .then((result) => result.json())
-    .catch((error) => error);
-};
-export const postQuoteData = (url, title, content) => {
-  let query = `query{
- 
-      allPosts{
-       id
-       content 
-        date
+  const query = `mutation addMutation{
+    addPost(title: "${title}",content: "${content}"){
+      post{
+        title: title,
+        content: content
       }
-      
-    }`;
-
-  return fetchData(url, {
+    }
+  }`;
+  return fetch(url, {
     method: "POST",
-    mode: "no-cors",
-    headers: { Accept: "application/json", "Content-Type": "application/JSON" },
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
     body: JSON.stringify({
       query,
-      // title: title,
-      // content: content,
+    }),
+  })
+    .then((result) => {
+      return result.json();
+    })
+    .then((result) => console.log("RESULT->", result))
+    .catch((error) => console.log("ERRROR", error));
+};
+// export const postQuoteData = (url, title, content) => {
+//   // let query = `mutation {
+//   //       addPost(title:"hi",content:"bonjour"){
+//   //          post{title,content}
+//   //       }`;
+
+//   return fetchData(url, {
+//     method: "POST",
+//     mode: "no-cors",
+//     headers: { Accept: "application/json", "Content-Type": "application/JSON" },
+//     body: JSON.stringify({
+//       query,
+//       variables: { title, content },
+//     }),
+//   })
+//     .then((result) => result.json())
+//     .catch((error) => error);
+// };
+
+export const deleteContentData = (url, id) => {
+  const query = `mutation deleteMutation {
+    deletePost(id:"${id}"){
+      post{id: id}
+    }
+  }`;
+
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/JSON",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      query: query,
+      // variables: { id },
     }),
   })
     .then((result) => result.json())

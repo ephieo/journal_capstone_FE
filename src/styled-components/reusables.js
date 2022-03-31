@@ -66,3 +66,12 @@ export const Logo = styled.h1`
     font-size: 16px;
   }
 `;
+
+export const Btn = styled.button`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border: solid black 3px;
+  height: 7vh;
+  background: transparent;
+`;

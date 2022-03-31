@@ -45,7 +45,7 @@ export default function Home() {
           setTaskOrder().map((e) => {
             return (
               <SubCont key={e.id}>
-                <PostTitleBox title={e.title} date={e.date} />
+                <PostTitleBox title={e.title} date={e.date} id={e.id} />
               </SubCont>
             );
           })
