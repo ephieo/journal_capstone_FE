@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import { fetchData } from "../utils/fetchy";
+import { getAllPostData } from "../utils/fetchy";
 import { newestDate, oldestDate } from "../utils/sortDate";
 import Capitalise from "../utils/utils";
 
@@ -25,12 +25,13 @@ export default function Home() {
   }
 
   const resolveData = () => {
-    fetchData("http://127.0.0.1:8000/posts")
+    getAllPostData("http://127.0.0.1:8000/graphql")
       .then((result) => setData(result))
       .catch((error) => error);
   };
 
   let location = useLocation();
+  // let { id } = useParams();
   return (
     <MainCont>
       {console.log(data)}

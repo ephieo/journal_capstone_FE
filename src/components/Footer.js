@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchData } from "../utils/fetchy";
+// import { getAllPostData } from "../utils/fetchy";
 
 import { FooterCont, Logo } from "../styled-components/reusables";
 import {
@@ -12,7 +12,7 @@ export default function Footer({ page }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetchData("https://type.fit/api/quotes", {
+    fetch("https://type.fit/api/quotes", {
       method: "GET",
     })
       .then((data) => setData(data))

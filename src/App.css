@@ -4,6 +4,9 @@
   margin:0;
   background: #EEEAE4;
 }
+.links{
+  text-decoration: none;
+}
 
 /* width */
 ::-webkit-scrollbar {

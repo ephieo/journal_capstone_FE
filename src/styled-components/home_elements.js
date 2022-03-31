@@ -19,7 +19,6 @@ export const PostBar = styled.div`
   align-items: center;
   width: 70vw;
   height: 10vh;
-  /* border: solid black 3px; */
 `;
 
 export const PostTitle = styled.h4`

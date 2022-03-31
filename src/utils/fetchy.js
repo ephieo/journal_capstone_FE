@@ -1,9 +1,54 @@
-export const fetchData = (url) => {
-  return fetch(url)
-    .then((res) => res.json())
-    .catch((error) => error);
-};
+export const getAllPostData = (url) => {
+  const query = `query{
+	
+    allPosts{
+      
+      id
+      title
+      content 
+      date
+      
+    } 
+    
+  }`;
 
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  })
+    .then((result) => {
+      return result.json();
+    })
+    .catch((error) => console.log("ERRROR", error));
+};
+export const getSinglePost = (url, id) => {
+  const query = `query{
+    post(id: ${id.id}){
+      id
+      title
+      content
+      date
+    }
+  }`;
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  })
+    .then((result) => {
+      return result.json();
+    })
+    .catch((error) => console.log("ERRROR", error));
+};
 export const postContentData = (url, title, content) => {
   const query = `mutation addMutation{
     addPost(title: "${title}",content: "${content}"){
