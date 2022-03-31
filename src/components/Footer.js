@@ -18,13 +18,12 @@ export default function Footer({ page }) {
       .then((data) => setData(data))
       .catch((error) => console.log(error));
   }, []);
-  // console.log(data);
 
   function quoteRandomiser(data) {
     if (data) {
       let rand = Math.round(Math.random() * 100);
-      console.log("rand", rand);
-      // return data[rand];
+
+      return data[rand];
     }
   }
 
@@ -32,21 +31,19 @@ export default function Footer({ page }) {
     <FooterCont>
       <Logo>{page}</Logo>
       <QuoteBox>
-        <PostTitle>Quote of the Day</PostTitle>
-        {data ? quoteRandomiser(data).author : "hello"}
-        {data ? data[2].author : "hello"}
-        {/* {data ? (
+        <PostTitle>Quote of the Day : </PostTitle>
+        {data ? (
           <>
-            <PostTitle>
-              Quote of the Day {quoteRandomiser(data).author}
-            </PostTitle>
             <Text family="'Antic Didone', serif;">
-              {quoteRandomiser(data).text}
+              {quoteRandomiser(data).text}- {quoteRandomiser(data).author}
+            </Text>
+            <Text family="'Antic Didone', serif;" margin="01rem">
+              - {quoteRandomiser(data).author}
             </Text>
           </>
         ) : (
           <Text>No Quote Today Sorry :(</Text>
-        )} */}
+        )}
       </QuoteBox>
     </FooterCont>
   );

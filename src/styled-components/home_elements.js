@@ -35,6 +35,8 @@ export const Text = styled.p`
   font-family: ${(props) => (props.family ? props.family : "Playfair Display")};
   font-size: ${(props) => (props.font_size ? props.font_size : "16px")};
   color: #003221;
+  margin: ${(props) => (props.margin ? props.margin : "0")};
+  font-weight: ${(props) => (props.weight ? props.weight : "none")};
   margin: 0.3rem;
   @media (max-width: 968px) {
     font-size: 10px;
@@ -61,7 +63,7 @@ export const ToggleBtn = styled.button`
 export const QuoteBox = styled.div`
   width: 20vw;
   height: 18vh;
-  /* border: solid green 3px; */
+
   border-radius: 20px;
   padding: 1rem;
   margin-bottom: 2.5rem;
