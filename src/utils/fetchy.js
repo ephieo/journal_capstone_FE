@@ -32,6 +32,35 @@ export const getAllPostData = (url) => {
     })
     .catch((error) => console.log("ERRROR", error));
 };
+
+export const getAllQuoteData = (url) => {
+  const query = `query{
+	
+    allQuotes{
+      
+      id
+      title
+      content 
+      date
+      
+    } 
+    
+  }`;
+
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  })
+    .then((result) => {
+      return result.json();
+    })
+    .catch((error) => console.log("ERRROR", error));
+};
 export const getSinglePost = (url, id) => {
   const query = `query{
     post(id: ${id.id}){
@@ -80,24 +109,31 @@ export const postContentData = (url, title, content) => {
     .then((result) => console.log("RESULT->", result))
     .catch((error) => console.log("ERRROR", error));
 };
-// export const postQuoteData = (url, title, content) => {
-//   // let query = `mutation {
-//   //       addPost(title:"hi",content:"bonjour"){
-//   //          post{title,content}
-//   //       }`;
-
-//   return fetchData(url, {
-//     method: "POST",
-//     mode: "no-cors",
-//     headers: { Accept: "application/json", "Content-Type": "application/JSON" },
-//     body: JSON.stringify({
-//       query,
-//       variables: { title, content },
-//     }),
-//   })
-//     .then((result) => result.json())
-//     .catch((error) => error);
-// };
+export const postQuoteData = (url, title, content) => {
+  const query = `mutation addMutation{
+      addQuote(title: "${title}",content: "${content}"){
+        quote{
+          title: title,
+          content: content
+        }
+      }
+    }`;
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  })
+    .then((result) => {
+      return result.json();
+    })
+    .then((result) => console.log("RESULT->", result))
+    .catch((error) => console.log("ERRROR", error));
+};
 
 export const deleteContentData = (url, id) => {
   const query = `mutation deleteMutation {

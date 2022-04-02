@@ -3,8 +3,7 @@ import { useState } from "react";
 
 import { postContentData } from "../utils/fetchy";
 
-import { useLocation, useNavigate } from "react-router-dom";
-import Capitalise from "../utils/utils";
+import { useNavigate } from "react-router-dom";
 
 import { MainCont } from "../styled-components/reusables";
 import {
@@ -13,13 +12,11 @@ import {
   SubmitInput,
   Input,
 } from "../styled-components/form_elements";
-import Footer from "../components/Footer";
 
 export default function AddPostForm() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
-  let location = useLocation();
   let navigate = useNavigate();
 
   const url = `http://127.0.0.1:8000/graphql`;
