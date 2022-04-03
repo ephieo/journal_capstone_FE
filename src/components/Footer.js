@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchData, postQuoteData } from "../utils/fetchy";
 import { refreshPage } from "../utils/utils";
-import qt_add_btn from "./../images/quote-add.svg";
 
 import { FooterCont, Logo, Img, Btn } from "../styled-components/reusables";
 import {
@@ -10,6 +9,7 @@ import {
   Text,
 } from "./../styled-components/home_elements";
 
+import qt_add_btn from "./../images/quote-add.svg";
 import { useNavigate } from "react-router-dom";
 
 export default function Footer({ page }) {
