@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useLocation, Link } from "react-router-dom";
-import Capitalise from "../utils/utils";
+import { Capitalise } from "../utils/utils";
 import { NavLink } from "./../styled-components/navbar";
 import { MainCont, SubCont } from "../styled-components/reusables";
 import Footer from "../components/Footer";

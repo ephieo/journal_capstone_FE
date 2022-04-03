@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { getAllPostData } from "../utils/fetchy";
 import { newestDate, oldestDate } from "../utils/sortDate";
-import Capitalise from "../utils/utils";
+import { Capitalise } from "../utils/utils";
 
 import { MainCont, SubCont } from "./../styled-components/reusables";
 import PostsManager from "../components/PostsManager";

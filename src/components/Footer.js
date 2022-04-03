@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchData, postQuoteData } from "../utils/fetchy";
+import { refreshPage } from "../utils/utils";
 import qt_add_btn from "./../images/quote-add.svg";
 
 import { FooterCont, Logo, Img, Btn } from "../styled-components/reusables";
@@ -13,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Footer({ page }) {
   const [data, setData] = useState(null);
+  const [click, setClick] = useState(true);
 
   let navigate = useNavigate();
 
@@ -26,15 +28,20 @@ export default function Footer({ page }) {
 
     setTimeout(() => {
       localStorage.removeItem("quoteData");
+      localStorage.removeItem("clicked?");
+      setClick(false);
     }, 86400000);
   }, []);
-  console.log(data);
 
   function resolveQuoteData() {
     fetchData("https://type.fit/api/quotes", {})
-      .then((data) =>
-        localStorage.setItem("quoteData", JSON.stringify(quoteRandomiser(data)))
-      )
+      .then((data) => {
+        localStorage.setItem(
+          "quoteData",
+          JSON.stringify(quoteRandomiser(data))
+        );
+        refreshPage();
+      })
       .catch((error) => console.log(error));
   }
 
@@ -54,18 +61,23 @@ export default function Footer({ page }) {
   }
 
   function handleClick() {
-    return data
-      ? handleQuoteData(
-          url,
-          data.author === null ? "unknown" : data.author,
-          data.text
-        )
-      : 0;
+    if (data) {
+      handleQuoteData(
+        url,
+        data.author === null ? "unknown" : data.author,
+        data.text
+      );
+      setClick(true);
+      return click
+        ? localStorage.setItem("clicked?", "true")
+        : localStorage.getItem("clicked?");
+    }
   }
 
   return (
     <FooterCont>
       <Logo>{page}</Logo>
+
       <QuoteBox>
         <PostTitle>Quote of the Day : </PostTitle>
 
@@ -77,13 +89,17 @@ export default function Footer({ page }) {
                 onClick={() => {
                   handleClick();
                 }}>
-                <Img
-                  src={qt_add_btn}
-                  alt="quote add icon"
-                  width="1.3rem"
-                  height="1.3rem"
-                  margin=" 0.5rem 3rem 0 0"
-                />
+                {!localStorage.getItem("clicked?") ? (
+                  <Img
+                    src={qt_add_btn}
+                    alt="quote add icon"
+                    width="1.3rem"
+                    height="1.3rem"
+                    margin=" 0.5rem 1rem 0 0"
+                  />
+                ) : (
+                  ""
+                )}
               </Btn>
               - {data.author}
             </Text>

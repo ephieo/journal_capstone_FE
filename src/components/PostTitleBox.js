@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { SubCont, Img, Btn } from "../styled-components/reusables";
 import { PostTitle, PostDate } from "../styled-components/home_elements";
 import blog_icon from "../images/blog-icon.svg";
 import bin_icon from "./../images/bin.svg";
-import { deleteContentData, getSinglePost } from "../utils/fetchy";
+import { deleteContentData } from "../utils/fetchy";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function PostTitleBox({ title, date, id }) {
