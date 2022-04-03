@@ -8,7 +8,7 @@ export default function Navbar() {
   let location = useLocation();
 
   function handleClick() {
-    if (!location === "/menu") {
+    if (location !== "/menu") {
       navigate("/menu");
     } else {
       navigate(-1);

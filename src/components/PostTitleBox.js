@@ -4,6 +4,7 @@ import { PostTitle, PostDate } from "../styled-components/home_elements";
 import blog_icon from "../images/blog-icon.svg";
 import bin_icon from "./../images/bin.svg";
 import { deleteContentData } from "../utils/fetchy";
+import { refreshPage } from "./../utils/utils";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function PostTitleBox({ title, date, id }) {
@@ -15,6 +16,7 @@ export default function PostTitleBox({ title, date, id }) {
       .then((result) => result.json())
       .catch((error) => error);
     navigate("/");
+    refreshPage();
   }
 
   return (

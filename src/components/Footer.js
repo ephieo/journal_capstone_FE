@@ -31,6 +31,7 @@ export default function Footer({ page }) {
       localStorage.removeItem("clicked?");
       setClick(false);
     }, 86400000);
+    // eslint-disable-next-line
   }, []);
 
   function resolveQuoteData() {
@@ -61,6 +62,7 @@ export default function Footer({ page }) {
   }
 
   function handleClick() {
+    navigate("/quotes");
     if (data) {
       handleQuoteData(
         url,
@@ -85,6 +87,7 @@ export default function Footer({ page }) {
           <>
             <Text family="'Antic Didone', serif;">{data.text}</Text>
             <Text family="'Antic Didone', serif;" margin="0rem">
+              - {data.author === null ? "unknown" : data.author}
               <Btn
                 onClick={() => {
                   handleClick();
@@ -95,13 +98,12 @@ export default function Footer({ page }) {
                     alt="quote add icon"
                     width="1.3rem"
                     height="1.3rem"
-                    margin=" 0.5rem 1rem 0 0"
+                    margin=" 0.1rem 0.2rem 0 0"
                   />
                 ) : (
                   ""
                 )}
               </Btn>
-              - {data.author}
             </Text>
           </>
         ) : (

@@ -26,7 +26,10 @@ export default function PostBox({ title, content, date }) {
   }
   return (
     <>
-      <Title font_size="30px">{title}</Title>
+      <Title font_size="30px">
+        <ReadMoreReact text={title} readMoreText={"..."} />
+      </Title>
+
       <PostCont>
         <ReadMoreReact text={content} readMoreText={"..."} />
 
