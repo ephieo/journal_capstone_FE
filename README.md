@@ -1,5 +1,9 @@
 # JOURNAL APP FE
 
+### FIGMA LINK :
+
+https://www.figma.com/file/3fremWcPmW6lRRTjyJNSJm/capstone-journal-app?node-id=43%3A292
+
 ### (Backend Repo):
 
 https://github.com/ephieo/journal_capstone_BE

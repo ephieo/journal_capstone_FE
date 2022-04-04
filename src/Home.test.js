@@ -3,6 +3,7 @@ import * as requests from "./utils/fetchy";
 import { render, screen, act } from "@testing-library/react";
 import Home from "./pages/home";
 import { BrowserRouter } from "react-router-dom";
+import localStorage from "./utils/localStorageMock";
 
 describe("Home", () => {
   let url = `http://127.0.0.1:8000/graphql`;
@@ -20,9 +21,19 @@ describe("Home", () => {
       content: "I went to watch a film it was great !!!",
     },
   ];
+  let storage;
+  beforeEach(() => {
+    storage = localStorage;
+  });
+
+  afterEach(() => {
+    window.localStorage = storage;
+  });
 
   global.fetch = jest.fn(() =>
-    Promise.resolve({ json: () => Promise.resolve({ fakePosts }) })
+    Promise.resolve({
+      json: () => Promise.resolve({ data: { allPosts: fakePosts } }),
+    })
   );
   beforeEach(() => {
     fetch.mockClear();

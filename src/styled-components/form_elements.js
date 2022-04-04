@@ -25,13 +25,16 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
   width: 70%;
   height: ${(props) => (props.height ? props.height : "7vh")};
   margin: 1rem;
   padding: 1rem;
   border: solid #003221 3px;
   border-radius: 30px;
-  /* background: #dbeccd; */
 `;
 
 export const SubmitInput = styled.input`

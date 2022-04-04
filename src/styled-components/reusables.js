@@ -5,7 +5,6 @@ export const MainCont = styled.div`
   flex-direction: ${(props) => (props.flex_dir ? props.flex_dir : "column")};
   justify-content: ${(props) => (props.justify ? props.justify : "center")};
   align-items: ${(props) => (props.align_items ? props.align_items : "center")};
-  /* border: black 3px solid; */
   background: ${(props) =>
     props.back_color ? props.back_color : "transparent"};
   height: ${(props) => (props.height ? props.height : "100vh")};
@@ -86,7 +85,6 @@ export const PostCont = styled.div`
   flex-direction: column;
   width: 40vw;
   padding: 2rem 2rem 0.2rem 2rem;
-  /* height: 60vh; */
   border-top: solid #003221 3px;
   border-bottom: solid #003221 3px;
   border-radius: 20px;

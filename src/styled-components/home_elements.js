@@ -9,7 +9,6 @@ export const PostToggle = styled.div`
   height: 7vh;
   border: #b5c2be dashed 3px;
   border-radius: 20px;
-  /* border: solid red 3px; */
 `;
 
 export const PostBar = styled.div`
