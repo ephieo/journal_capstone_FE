@@ -7,7 +7,6 @@ export const QuoteTitleCont = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: red solid 3px; */
 `;
 export const QuoteTextCont = styled.div`
   width: 90%;
