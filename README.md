@@ -9,7 +9,7 @@
       - images
       - pages
       - styled-components
-      - uitls
+      - utils
 
 ### How to run App :
 
