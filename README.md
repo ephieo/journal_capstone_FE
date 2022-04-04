@@ -65,10 +65,13 @@ Build a full-stack journaling application with a twist.
 
 In a technology of your choice, please prepare and present the UI design ideas (wireframes) to
 the client on Slack, apply it according to their feedback. [x]
+
 The app should work locally, don’t deploy it. [x]
+
 The client has strict budgeting rules and the crafters can’t bill for additional features that weren’t
 listed in the requirements above. Please fill the timesheet with the tasks that you’ve completed
 as you progress through.[ ]
+
 If in doubt about the scope of the project, reach out to the client on Slack. [x]
 
 #### Stack
