@@ -30,9 +30,10 @@ Clone locally :
 
 ### Note :
 
-- The quotes work by being saved into local storage to test teh removal of quotes after a certain time change the setTimer time in Footer.js to a shorter time period to see the removal of those cookies.
-  - How to access the saved data in localstorage ?
-    - inspect -> application -> storage -> Local Storage
+The quotes work by being saved into local storage to test teh removal of quotes after a certain time change the setTimer time in Footer.js to a shorter time period to see the removal of those cookies.
+
+- How to access the saved data in localstorage ?
+  - inspect -> application -> storage -> Local Storage
 
 ### How to run Tests :
 
