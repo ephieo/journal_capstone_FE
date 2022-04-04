@@ -4,7 +4,7 @@
 
 https://www.figma.com/file/3fremWcPmW6lRRTjyJNSJm/capstone-journal-app?node-id=43%3A292
 
-### (Backend Repo):
+### Backend Repo :
 
 https://github.com/ephieo/journal_capstone_BE
 
@@ -107,6 +107,8 @@ and database technology. Feel free to use any additional libraries eg. component
 - The Frontend tests were all running until I introduced the savedQuotes page and functionality. I used localStorage and JSON.parse/JSON.stringify for this functionality and somehow this broke a lot of my tests. I'm aware of this issue and would love to look into it if I had more time.
 
 The Error :
+
+This same error persists for all tests that I attempt to render.
 
 ---
 
