@@ -140,5 +140,6 @@ This same error persists for all tests that I attempt to render.
 - Being able to click onto individual quotes and delete them.
 - Text in the form wrapping onto the next line instead of one long line.
 - Fixing failing CI.
+- Updating Timesheets
 
 ### Developer - Ephrathah Oyedoh
