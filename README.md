@@ -23,6 +23,9 @@ https://github.com/ephieo/journal_capstone_BE
       - styled-components
       - utils
 
+![Apprenticeship -68](https://user-images.githubusercontent.com/60614102/161536309-cdb674f2-0b9f-471a-ad85-5f65057eaa44.jpg)
+
+
 ### How to run App :
 
 Clone locally :
