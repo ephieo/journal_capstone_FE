@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { getAllPostData } from "../utils/fetchy";
 import { newestDate, oldestDate } from "../utils/sortDate";
-import { Capitalise } from "../utils/utils";
+import { capitalise } from "../utils/utils";
 
 import { MainCont, SubCont } from "./../styled-components/reusables";
 import PostsManager from "../components/PostsManager";
@@ -57,7 +57,7 @@ export default function Home() {
         page={
           location.pathname === "/"
             ? "All Posts"
-            : Capitalise(location.pathname)
+            : capitalise(location.pathname)
         }
       />
     </MainCont>

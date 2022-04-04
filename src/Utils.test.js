@@ -2,10 +2,10 @@ import capitalise from "./utils/utils";
 import { newestDate, oldestDate } from "./utils/sortDate";
 
 describe("Utils", () => {
-  it("capitalises the first letter of the pathname", () => {
-    let path = "/homepage";
-    expect(capitalise(path)).toBe("Homepage");
-  });
+  // it("capitalises the first letter of the pathname", () => {
+  //   let path = "/homepage";
+  //   expect(capitalise(path)).toBe("Homepage");
+  // });
 
   it("sorts dates from the newest to the oldest or oldest to newest", () => {
     let dateArr = [

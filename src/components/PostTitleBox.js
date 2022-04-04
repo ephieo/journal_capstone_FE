@@ -16,7 +16,7 @@ export default function PostTitleBox({ title, date, id }) {
       .then((result) => result.json())
       .catch((error) => error);
     navigate("/");
-    refreshPage();
+    refreshPage("/");
   }
 
   return (

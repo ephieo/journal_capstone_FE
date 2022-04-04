@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
 
-import { Capitalise } from "../utils/utils";
+import { capitalise } from "../utils/utils";
 
 import { NavLink } from "./../styled-components/navbar";
 import { MainCont, SubCont } from "../styled-components/reusables";
@@ -25,7 +25,7 @@ export default function SavedQuotes() {
       </SubCont>
       <Footer
         page={
-          location.pathname === "/menu" ? "Menu" : Capitalise(location.pathname)
+          location.pathname === "/menu" ? "Menu" : capitalise(location.pathname)
         }
       />
     </MainCont>

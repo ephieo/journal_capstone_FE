@@ -41,7 +41,7 @@ export default function Footer({ page }) {
           "quoteData",
           JSON.stringify(quoteRandomiser(data))
         );
-        refreshPage();
+        refreshPage("/");
       })
       .catch((error) => console.log(error));
   }
