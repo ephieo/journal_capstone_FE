@@ -150,14 +150,8 @@ export const deleteContentData = (url, id) => {
     },
     body: JSON.stringify({
       query: query,
-      // variables: { id },
     }),
   })
     .then((result) => result.json())
     .catch((error) => error);
 };
-
-export function paramsUrl(url, title, content) {
-  const newUrl = `${url}?title=${title}&content=${content}`;
-  return newUrl;
-}

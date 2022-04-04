@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getSinglePost } from "../utils/fetchy";
 import { useParams } from "react-router-dom";
-import PostBox from "./../components/PostBox";
 
+import { getSinglePost } from "../utils/fetchy";
+
+import PostBox from "./../components/PostBox";
 import { MainCont, SubCont } from "../styled-components/reusables";
+
 export default function PostPage() {
   const [data, setData] = useState(null);
 
@@ -11,6 +13,7 @@ export default function PostPage() {
 
   useEffect(() => {
     resolvePostData();
+    // eslint-disable-next-line
   }, []);
 
   const url = `http://127.0.0.1:8000/graphql`;

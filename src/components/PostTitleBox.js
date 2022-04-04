@@ -1,11 +1,14 @@
 import React from "react";
+import { useNavigate, Link } from "react-router-dom";
+
 import { SubCont, Img, Btn } from "../styled-components/reusables";
 import { PostTitle, PostDate } from "../styled-components/home_elements";
+
 import blog_icon from "../images/blog-icon.svg";
 import bin_icon from "./../images/bin.svg";
+
 import { deleteContentData } from "../utils/fetchy";
 import { refreshPage } from "./../utils/utils";
-import { useNavigate, Link } from "react-router-dom";
 
 export default function PostTitleBox({ title, date, id }) {
   let navigate = useNavigate();

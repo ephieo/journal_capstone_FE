@@ -7,7 +7,7 @@ import { NavLink } from "./../styled-components/navbar";
 import { MainCont, SubCont } from "../styled-components/reusables";
 import Footer from "../components/Footer";
 
-export default function SavedQuotes() {
+export default function Menu() {
   let location = useLocation();
   return (
     <MainCont>
