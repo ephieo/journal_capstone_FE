@@ -25,6 +25,9 @@ https://github.com/ephieo/journal_capstone_BE
 
 ![Apprenticeship -68](https://user-images.githubusercontent.com/60614102/161536309-cdb674f2-0b9f-471a-ad85-5f65057eaa44.jpg)
 
+![Apprenticeship -69](https://user-images.githubusercontent.com/60614102/161537084-b2b30f87-26c3-4db1-9ff9-ce0783a93aac.jpg)
+
+
 
 ### How to run App :
 
