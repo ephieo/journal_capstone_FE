@@ -27,8 +27,6 @@ https://github.com/ephieo/journal_capstone_BE
 
 ![Apprenticeship -69](https://user-images.githubusercontent.com/60614102/161537084-b2b30f87-26c3-4db1-9ff9-ce0783a93aac.jpg)
 
-
-
 ### How to run App :
 
 Clone locally :
@@ -140,5 +138,7 @@ This same error persists for all tests that I attempt to render.
 - Displaying posts and quotes in order of date and time.
 - Making the webapp responsive on different devices and sizes.
 - Being able to click onto individual quotes and delete them.
+- Text in the form wrapping onto the next line instead of one long line.
+- Fixing failing CI.
 
 ### Developer - Ephrathah Oyedoh
