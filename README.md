@@ -1,5 +1,13 @@
 # JOURNAL APP FE
 
+### (Backend Repo):
+
+https://github.com/ephieo/journal_capstone_BE
+
+#### Famous quotes API :
+
+- https://type.fit/api/quotes
+
 ### File Structure :
 
 - journal_app_fe
@@ -20,6 +28,12 @@ Clone locally :
 - `npm i` or `npm install`
 - `npm run start` or `npm start`
 
+### Note :
+
+- The quotes work by being saved into local storage to test teh removal of quotes after a certain time change the setTimer time in Footer.js to a shorter time period to see the removal of those cookies.
+  - How to access the saved data in localstorage ?
+    - inspect -> application -> storage -> Local Storage
+
 ### How to run Tests :
 
 #### Make sure dependencies are installed
@@ -33,16 +47,6 @@ Clone locally :
 - react : 17.0.2
 - styled-components: 5.3.3
 
-### Project Description :
-
-- This repo contains the code related to the frontend of the project.
-  The frontend utilises:
-  - Figma
-  - React
-  - Styled Components
-  - Jest Testing
-  - prettier
-
 ### Chosen Stack :
 
 - Python backend
@@ -52,6 +56,16 @@ Clone locally :
 - Read-more-react
 - Prettier
 - EsLinter
+
+### Project Description :
+
+- This repo contains the code related to the frontend of the project.
+  The frontend utilises:
+  - Figma
+  - React
+  - Styled Components
+  - Jest Testing
+  - prettier
 
 #### Requirements
 
@@ -82,5 +96,9 @@ If in doubt about the scope of the project, reach out to the client on Slack. [x
 
 The remaining stack is at your discretion. Pick the web framework, GraphQL support (if needed)
 and database technology. Feel free to use any additional libraries eg. components libraries.
+
+### Stretch Goals :
+
+- Loading icon instead of " No quote today" text in page footer.
 
 ### Developer - Ephrathah Oyedoh
