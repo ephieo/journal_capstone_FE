@@ -102,6 +102,30 @@ If in doubt about the scope of the project, reach out to the client on Slack. [x
 The remaining stack is at your discretion. Pick the web framework, GraphQL support (if needed)
 and database technology. Feel free to use any additional libraries eg. components libraries.
 
+### Outstanding Errors :
+
+- The Frontend tests were all running until I introduced the savedQuotes page and functionality. I used localStorage and JSON.parse/JSON.stringify for this functionality and somehow this broke a lot of my tests. I'm aware of this issue and would love to look into it if I had more time.
+
+The Error :
+
+---
+
+`✕ a request is made with the right parameter (115 ms)
+
+● Home › a request is made with the right parameter
+
+    TypeError: Cannot read properties of undefined (reading 'sections')
+
+      37 |
+      38 |   it("a request is made with the right parameter", async () => {
+    > 39 |     render(<Home url={url} />);
+         |     ^
+      40 |
+      41 |     expect(requests.getAllPostData).toHaveBeenCalledWith(url);
+      42 |   });`
+
+---
+
 ### Stretch Goals :
 
 - Loading icon instead of " No quote today" text in page footer.
