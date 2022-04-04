@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { getAllQuoteData } from "../utils/fetchy";
+import { newestDate } from "../utils/sortDate";
 
 import { MainCont, SubCont } from "../styled-components/reusables";
 import QuoteBox from "../components/QuoteBox";
@@ -21,7 +22,7 @@ export default function SavedQuotes() {
     <MainCont>
       <SubCont flex_dir="row" height="60vh">
         {data
-          ? data.map((e) => (
+          ? newestDate(data).map((e) => (
               <SubCont key={e.id}>
                 <QuoteBox title={e.title} content={e.content} data={e.date} />
               </SubCont>
