@@ -1,11 +1,22 @@
 # JOURNAL APP FE
 
+### File Structure :
+
+- journal_app_fe
+  - journal_fe
+    - src
+      - components
+      - images
+      - pages
+      - styled-components
+      - uitls
+
 ### How to run App :
 
 Clone locally :
 
 - `git clone https://github.com/ephieo/journal_capstone_FE.git`
-- `cd journal_capstone_FE/`
+- `cd journal_capstone_FE/journal_fe/`
 - `npm i` or `npm install`
 - `npm run start` or `npm start`
 
@@ -14,6 +25,13 @@ Clone locally :
 #### Make sure dependencies are installed
 
 - `npm run test` or `npm test`
+
+### Versions :
+
+- node : v17.5.0
+- graphql : 14.7.0
+- react : 17.0.2
+- styled-components: 5.3.3
 
 ### Project Description :
 
@@ -24,6 +42,16 @@ Clone locally :
   - Styled Components
   - Jest Testing
   - prettier
+
+### Chosen Stack :
+
+- Python backend
+- GraphQL
+- React frontend
+- Styled Components
+- Read-more-react
+- Prettier
+- EsLinter
 
 #### Requirements
 
