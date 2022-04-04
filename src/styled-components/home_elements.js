@@ -19,7 +19,6 @@ export const PostBar = styled.div`
   align-items: center;
   width: 70vw;
   height: 10vh;
-  /* border: solid black 3px; */
 `;
 
 export const PostTitle = styled.h4`
@@ -35,7 +34,9 @@ export const Text = styled.p`
   font-family: ${(props) => (props.family ? props.family : "Playfair Display")};
   font-size: ${(props) => (props.font_size ? props.font_size : "16px")};
   color: #003221;
+  font-weight: ${(props) => (props.weight ? props.weight : "none")};
   margin: 0.3rem;
+  padding: 0;
   @media (max-width: 968px) {
     font-size: 10px;
   }
@@ -61,8 +62,8 @@ export const ToggleBtn = styled.button`
 export const QuoteBox = styled.div`
   width: 20vw;
   height: 18vh;
-  /* border: solid green 3px; */
+  background: transparent;
   border-radius: 20px;
   padding: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 5rem;
 `;

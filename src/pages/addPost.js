@@ -1,10 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { postContentData, paramsUrl } from "../utils/fetchy";
-
-import { useLocation, useNavigate } from "react-router-dom";
-import Capitalise from "../utils/utils";
+import { postContentData } from "../utils/fetchy";
 
 import { MainCont } from "../styled-components/reusables";
 import {
@@ -13,21 +10,19 @@ import {
   SubmitInput,
   Input,
 } from "../styled-components/form_elements";
-import Footer from "../components/Footer";
 
 export default function AddPostForm() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
-  let location = useLocation();
   let navigate = useNavigate();
 
-  const url = paramsUrl(`http://127.0.0.1:8000/graphql/`, title, content, "-");
-  console.log(url);
+  const url = `http://127.0.0.1:8000/graphql`;
+
   function resolveFormData() {
-    postContentData(`${url}`, title, content, "-")
+    console.log(url, title, content);
+    postContentData(url, title, content)
       .then((result) => result.json())
-      .then((data) => console.log(data))
       .catch((error) => error);
     navigate("/");
   }
@@ -37,7 +32,7 @@ export default function AddPostForm() {
         <Form
           onSubmit={(e) => {
             e.preventDefault();
-            resolveFormData(url, title, content, "-");
+            resolveFormData(url, title, content);
           }}>
           <Label htmlFor="title">TITLE</Label>
           <Input
@@ -61,13 +56,6 @@ export default function AddPostForm() {
           <SubmitInput type="submit" value="SUBMIT" />
         </Form>
       </MainCont>
-      <Footer
-        page={
-          location.pathname === "/"
-            ? "All Posts"
-            : Capitalise(location.pathname)
-        }
-      />
     </>
   );
 }
