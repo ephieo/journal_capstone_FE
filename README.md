@@ -101,5 +101,8 @@ and database technology. Feel free to use any additional libraries eg. component
 ### Stretch Goals :
 
 - Loading icon instead of " No quote today" text in page footer.
+- Displaying posts and quotes in order of date and time.
+- Making the webapp responsive on different devices and sizes.
+- Being able to click onto individual quotes and delete them.
 
 ### Developer - Ephrathah Oyedoh
